@@ -1,0 +1,24 @@
+{{!< main}}
+
+<h2>Welcome, {{user.username}}!</h2>
+
+<section>
+  <h3>Your Posts</h3>
+  {{#each user.posts}}
+    <article>
+      <h4>{{title}}</h4>
+      <p>{{content}}</p>
+      <a href="/post/{{id}}">Read more</a>
+    </article>
+  {{/each}}
+</section>
+
+<section>
+  <h3>Your Comments</h3>
+  {{#each user.comments}}
+    <article>
+      <p>{{content}}</p>
+      <a href="/post/{{post.id}}">Commented on: {{post.title}}</a>
+    </article>
+  {{/each}}
+</section>

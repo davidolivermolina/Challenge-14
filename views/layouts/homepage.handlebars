@@ -1,0 +1,10 @@
+{{!< main}}
+
+{{#each posts}}
+  <article>
+    <h2>{{title}}</h2>
+    <p>{{content}}</p>
+    <p>Author: {{user.username}}</p>
+    <a href="/post/{{id}}">Read more</a>
+  </article>
+{{/each}}
